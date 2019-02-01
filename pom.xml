@@ -170,6 +170,7 @@
             </plugin>
 
         </plugins>
+        <finalName>tx-manager</finalName>
     </build>
 
 
