@@ -32,18 +32,13 @@
 </head>
 <body>
 <div class="container-fluid">
-    <!-- 返回首页 -->
-    <a class="pull-right" href="index.html">Return Home</a>
-    <!-- <div class="text text-danger">
+
+    <a class="pull-right" href="index.html">返回首页</a>
+
+    <div class="text text-danger">
         说明：</br>
         补偿记录展示的数据是分布事务发起方的切面数据信息。</br>
         记录时间是指发起方出现补偿时记录下的时间，并非是TxManager的记录数据的时间。</br>
-     </div>
-    -->  
-    <div class="text text-danger">
-        Description: < / br >
-        The data presented by the compensation record is the slice data information of the distributed transaction initiator.< / br >
-        Record time refers to the time recorded by the initiator when compensation occurs, which is not the time recorded by TxManager.</br>
     </div>
 
     <input type="hidden" id="model"/>
@@ -58,10 +53,8 @@
                     </colgroup>
                     <thead>
                     <tr>
-                    	  <!-- 模块名称 -->
-                        <th>Module Name</th>
-                        <!-- 条数 -->                        
-                        <th>Number</th>
+                        <th>模块名称</th>
+                        <th>条数</th>
                     </tr>
                     </thead>
                     <tbody id="list">
@@ -82,8 +75,7 @@
                     </colgroup>
                     <thead>
                     <tr>
-                        <!-- 记录日期 -->	
-                        <th>Record Date</th>
+                        <th>记录日期</th>
                     </tr>
                     </thead>
                     <tbody id="logs">
@@ -105,14 +97,10 @@
                     </colgroup>
                     <thead>
                     <tr>
-                    	  <!-- 记录时间 -->	
-                        <th>Record Time</th>
-                        <!-- 记录方法 -->	
-                        <th>Record Method</th>
-                        <!-- 执行时间 -->	
-                        <th>Execute Time</th>
-                        <!-- 操作 -->	
-                        <th>Operate</th>
+                        <th>记录时间</th>
+                        <th>执行方法</th>
+                        <th>执行时间</th>
+                        <th>操作</th>
                     </tr>
                     </thead>
                     <tbody id="compensate">
@@ -140,19 +128,12 @@
                     <h4 class="modal-title" id="myModalLabel">详细信息</h4>
                 </div>
                 <div class="modal-body">
-                	      <!-- <div class="text text-danger" style="padding: 0 0 5px 12px">
+                    <div class="text text-danger" style="padding: 0 0 5px 12px">
                         补偿详细说明：</br>
                         模块唯一标示：是由模块的ip+port然后md5加密得来，用于LCN系统的模块唯一识别码</br>
                         事务ID：事务组信息的唯一标示</br>
                         模块名称列表说明，该记录的数据未必是模块的完整调用曲线数据，没有事务的业务模块是不记录数据的。</br>
                         例如：参与模块 a b c d ，若a模块是发起方，执行顺序是a->b->c->d,若b事务是只读的，c没有事务，仅有d模块有事务。那么实际记录的模块数据仅会记录d模块的数据。
-                    </div>-->
-                    <div class="text text-danger" style="padding: 0 0 5px 12px">
-                        Compensation details: </br>
-                        Module unique identifier: Tt is obtained by the IP +port of the module and then md5 encryption. It is the unique identifier of the module for LCN system </br>
-                        Transaction ID: unique identifier for transaction group information </br>
-                        The list of module names indicates that the recorded data is not necessarily the complete invocation curve data of the module, and that a business module without transactions does not record data.< / br >
-                        For example: participating in module a, b, c, d. If module a is the initiator, the execution order is a->, b->, c->, d. If b transaction is read-only, only module d has transactions.Then the actual recorded module data will only record the data of module d.
                     </div>
                     <table class="table table-bordered table-striped">
                         <colgroup>
@@ -163,14 +144,10 @@
                         </colgroup>
                         <thead>
                         <tr>
-                        	  <!-- 属性名称 -->	
-                            <th>Attribute Name</th>
-                            <!-- 属性值 -->	
-                            <th>Attribute Value</th>
-                            <!-- 属性名称 -->	
-                            <th>Attribute Name</th>
-                            <!-- 属性值 -->	
-                            <th>Attribute Value</th>
+                            <th>属性名称</th>
+                            <th>属性值</th>
+                            <th>属性名称</th>
+                            <th>属性值</th>
                         </tr>
                         </thead>
                         <tbody id="body">
@@ -194,20 +171,14 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
-                    <!--<h4 class="modal-title">提醒</h4>-->
-                    <h4 class="modal-title">Reminder</h4>
+                    <h4 class="modal-title">提醒</h4>
                 </div>
-                <!--<div class="modal-body" id="content">
-                    确认要执行吗?
-                </div>-->
                 <div class="modal-body" id="content">
-                    Is it confirmed to be executed?
+                    确认要执行吗?
                 </div>
                 <div class="modal-footer">
-                	 <!--<button type="button" class="btn btn-success" data-event="button" data-dismiss="modal">确认</button>-->
-                    <button type="button" class="btn btn-success" data-event="button" data-dismiss="modal">Confirm</button>
-                   <!-- <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>-->
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" data-event="button" data-dismiss="modal">确认</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
                 </div>
             </div>
         </div>
